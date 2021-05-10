@@ -7,8 +7,8 @@
  * @invite DrhSxRxGkn
  * @donate https://www.paypal.me/Papela
  * @website https://github.com/Papela
- * @source https://github.com/Papela
- * @updateUrl https://mwittrien.github.io/BetterDiscordAddons/Plugins/BadgesEverywhere/BadgesEverywhere.plugin.jss
+ * @source https://github.com/Papela/BetterDiscordAddons/blob/main/Plugins/BadgesPapela/BadgesPapela.plugin.js
+ * @updateUrl https://raw.githubusercontent.com/Papela/BetterDiscordAddons/main/Plugins/BadgesPapela/BadgesPapela.plugin.js
  */
 
 module.exports = (_ => {
