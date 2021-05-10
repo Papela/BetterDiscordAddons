@@ -34,7 +34,7 @@ module.exports = (_ => {
 		
 		downloadLibrary () {
 			require("request").get("https://mwittrien.github.io/BetterDiscordAddons/Library/0BDFDB.plugin.js", (e, r, b) => {
-				if (!e && b && r.statusCode == 200) require("fs").writeFile(require("path").join(BdApi.Plugins.folder, "0BDFDB.plugin.js"), b, _ => BdApi.showToast("Finished downloading BDFDB Library", {type: "success"}));
+				if (!e && b && r.statusCode == 200) require("fs").writeFile(require("path").join(BdApi.Plugins.folder, "0BDFDB.plugin.js"), b, _ => BdApi.showToast("Libreria descargado correctamente", {type: "success"}));
 				else BdApi.alert("Error", "Could not download BDFDB Library Plugin. Try again later or download it manually from GitHub: https://mwittrien.github.io/downloader/?library");
 			});
 		}
@@ -45,7 +45,7 @@ module.exports = (_ => {
 				window.BDFDB_Global.downloadModal = true;
 				BdApi.showConfirmationModal("Library Missing", `The Library Plugin needed for ${config.info.name} is missing. Please click "Descargar" to install it.`, {
 					confirmText: "Descargar",
-					cancelText: "Cancel",
+					cancelText: "Cancelar",
 					onCancel: _ => {delete window.BDFDB_Global.downloadModal;},
 					onConfirm: _ => {
 						delete window.BDFDB_Global.downloadModal;
@@ -82,11 +82,11 @@ module.exports = (_ => {
 				
 				this.defaults = {
 					settings: {
-						showInPopout:		{value: true, 	description: "Show Badge in User Popout"},
-						showInChat:			{value: true, 	description: "Show Badge in Chat Window"},
-						showInMemberList:	{value: true, 	description: "Show Badge in Member List"},
-						useColoredVersion:	{value: true, 	description: "Use colored version of the Badges for Chat and Members"},
-						showNitroDate:		{value: true, 	description: "Show the subscription date for Nitro/Boost Badges"}
+						showInPopout:		{value: true, 	description: "Mostrar Logro en el usuario"},
+						showInChat:			{value: true, 	description: "Mostrar Logros en el chat."},
+						showInMemberList:	{value: true, 	description: "Mostrar Logros en la lista de miembros."},
+						useColoredVersion:	{value: true, 	description: "Usar version coloreada de Logros"},
+						showNitroDate:		{value: true, 	description: "Ver el tiempo de suscripcion de Nitro."}
 					},
 					badges: {
 						"STAFF": {
@@ -171,17 +171,17 @@ module.exports = (_ => {
 						"GUILD_BOOST": {
 							value: true,
 							id: "NitroGuildBoost",
-								"name": "Nitro Guild Boost",
+								"name": "Mejora de servidores con Nitro",
 							icon: "profileGuildSubscriberlvl",
 							size: 17,
-							types: [1,2,3,4,5,6,7,8,9]
+							types: [1,2,3,4,9]
 						}
 					},
 					indicators: {
 						"CURRENT_GUILD_BOOST": {
 							value: true,
 							id: "CurrentGuildBoost",
-								"name": "Current Nitro Guild Boost",
+								"name": "Nivel de mejora de servidores con Nitro",
 							inner: `<svg name="PremiumGuildSubscriberBadge" class="${BDFDB.disCNS.memberpremiumicon + BDFDB.disCN.membericon}" aria-hidden="false" width="24" height="24" viewBox="0 0 8 12"><path d="M4 0L0 4V8L4 12L8 8V4L4 0ZM7 7.59L4 10.59L1 7.59V4.41L4 1.41L7 4.41V7.59Z" fill="currentColor"></path><path d="M2 4.83V7.17L4 9.17L6 7.17V4.83L4 2.83L2 4.83Z" fill="currentColor"></path></svg>`
 						},
 					}
@@ -281,7 +281,6 @@ module.exports = (_ => {
 					${BDFDB.dotCN._badgeseverywherebadgesinner + BDFDB.notCNS.userbadgescolored + BDFDB.dotCN._badgeseverywherebadge} svg {
 						color: unset !important;
 					}
-
 					${BDFDB.dotCNS.member + BDFDB.dotCN.memberpremiumicon + BDFDB.notCN._badgeseverywhereindicatorinner} {display: none;}
 				`;
 
@@ -372,7 +371,7 @@ module.exports = (_ => {
 					labelChildren: this.createSettingsBadges(flag)
 				}));
 				settingsItems.push(BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.SettingsPanelList, {
-					title: "Display Badges:",
+					title: "Mostrar Logros:",
 					children: innerItems
 				}));
 				
