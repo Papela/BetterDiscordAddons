@@ -21,7 +21,10 @@ module.exports = (_ => {
 		},
 		"changeLog": {
 			"fixed": {
-				"BetterDiscord Crash": "Fixed an error with the plugin when open BetterDiscord."
+				"Error Crasheo": "Se ha arreglado el error que hacia que el plugin se crasheara"
+			},
+			"improved": {
+				"Nuevo Logro": "Se ha agregado un Logro personalizado al dueño del Plugin."
 			}
 		}
 	};
