@@ -1,5 +1,5 @@
 /**
- * @name BadgesPapela
+ * @name LNYMPapela
  * @author Papela
  * @authorId 529736520048050189
  * @version 1.0.0
@@ -14,17 +14,18 @@
 module.exports = (_ => {
 	const config = {
 		"info": {
-			"name": "BadgesPapela",
+			"name": "LNYMPapela",
 			"author": "Papela",
 			"version": "1.0.0",
-			"description": "Agrega Logros (Nitro, Hypesquad, etc...) personalizados en Discord."
+			"description": "Agrega los Logros en los mensajes, desbloquea funciones de discord Nitro..."
 		},
 		"changeLog": {
 			"fixed": {
 				"Error Crasheo": "Se ha arreglado el error que hacia que el plugin se crasheara"
 			},
 			"improved": {
-				"Nuevo Logro": "Se ha agregado un Logro personalizado al dueño del Plugin."
+				"Nuevo Logro": "Se ha agregado un Logro personalizado al dueño del Plugin",
+                                "Retrasmision en FullHD": "Se ha agregado la opcion de restransmitir en Full HD sin tener nitro"
 			}
 		}
 	};
@@ -85,6 +86,7 @@ module.exports = (_ => {
 				
 				this.defaults = {
 					settings: {
+                                                streamfullhd:		{value: false, 	description: "Comparte pantalla en FullHD y 60FPS!"},
 						showInPopout:		{value: true, 	description: "Mostrar Logro en el usuario"},
 						showInChat:			{value: true, 	description: "Mostrar Logros en el chat."},
 						showInMemberList:	{value: true, 	description: "Mostrar Logros en la lista de miembros."},
@@ -162,6 +164,13 @@ module.exports = (_ => {
 							id: "EarlySupporter",
 								"name": "EARLY_SUPPORTER_TOOLTIP",
 							icon: "profileBadgeEarlySupporter",
+							size: 24
+						},
+						"PLUGIN_OWNER": {
+							value: true,
+							id: "PluginOwner",
+								"name": "PLUGIN_OWNER",
+							icon: "profileBadgeStaff",
 							size: 24
 						},
 						"NITRO": {
