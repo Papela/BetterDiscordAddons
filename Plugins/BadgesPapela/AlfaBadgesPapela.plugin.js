@@ -17,7 +17,7 @@ module.exports = (_ => {
 			"name": "LNYMPapela",
 			"author": "Papela",
 			"version": "1.0.0",
-			"description": "Agrega los Logros en los mensajes, desbloquea funciones de discord Nitro..."
+			"description": "Plugin en version ALFA! Agrega los Logros en los mensajes, desbloquea funciones de discord Nitro..."
 		},
 		"changeLog": {
 			"fixed": {
