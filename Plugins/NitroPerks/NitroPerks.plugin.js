@@ -1,7 +1,7 @@
 /**
- * @name NitroPerks
+ * @name NitroPerks - Beta
  * @website https://github.com/respecting/NitroPerks
- * @source https://raw.githubusercontent.com/respecting/NitroPerks/main/NitroPerks.plugin.js
+ * @source https://github.com/Papela/BetterDiscordAddons/edit/main/Plugins/NitroPerks/nitroperks.plugin.js
  * @updateUrl https://raw.githubusercontent.com/respecting/NitroPerks/main/NitroPerks.plugin.js
  */
 /*@cc_on
