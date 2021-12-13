@@ -1,0 +1,57 @@
+/**
+ * @name Markos - Nocturnal
+ * @version 2.6.2
+ * @description Simple, simpio y tema oscuro.
+ * @author Papela#8062
+  * @invite DrhSxRxGkn
+ * @source https://github.com/codedotspectra/themes
+ * @website https://codedotspectra.me/
+ *//*
+███╗   ██╗ ██████╗  ██████╗████████╗██╗   ██╗██████╗ ███╗   ██╗ █████╗ ██╗
+████╗  ██║██╔═══██╗██╔════╝╚══██╔══╝██║   ██║██╔══██╗████╗  ██║██╔══██╗██║
+██╔██╗ ██║██║   ██║██║        ██║   ██║   ██║██████╔╝██╔██╗ ██║███████║██║
+██║╚██╗██║██║   ██║██║        ██║   ██║   ██║██╔══██╗██║╚██╗██║██╔══██║██║
+██║ ╚████║╚██████╔╝╚██████╗   ██║   ╚██████╔╝██║  ██║██║ ╚████║██║  ██║███████╗
+╚═╝  ╚═══╝ ╚═════╝  ╚═════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝
+###################################################################################################
+Nocturnal Theme for Better Discord
+The author (Papela#8062) retains full rights of this code.
+You are not allowed to redistribute this theme or any part of it as your own. That means do not post an edited version of this theme anywhere.
+You are allowed to edit the theme for personal use only.
+If you enjoy using the theme, help spread the word!
+This theme is meant to be used with the dark version of discord
+/*#################################################################################################*/
+/* Main Import */
+@import url('https://codedotspectra.github.io/themes/nocturnal/importCSS/core.css');
+/* MiniThemes */
+@import url('https://codedotspectra.github.io/themes/core/hljs.css');
+@import url('https://codedotspectra.github.io/themes/core/settings-icons.css');
+@import url('https://discordstyles.github.io/RadialStatus/base.css');
+@import url('https://codedotspectra.github.io/themes/core/badges.css');
+/* Fixes */
+@import url('https://xcruxiex.github.io/BBDThemes/Fixes/NocturnalFixes.css');
+/*#################################################################################################*/
+:root {
+  --backgroundDark: rgb(28, 28, 37);
+  --backgroundDarker: rgb(2, 25, 40);
+  --primary: #00e66f;
+  --primaryGradient1: #008ae6;
+  --primaryGradient2: #00e68a;
+  --DangerColor: #dc3545;
+  --WarningColor: #ffc107;
+  --SuccesColor: #28a745;
+  --backgroundCode: rgba(22,28,37,.3);
+  --backgroundName: rgba(24,28,37,.3);
+  
+  /* Radial Status */
+  --rs-small-spacing: 2px;
+  --rs-large-spacing: 3px;
+  --rs-width: 2.2px;
+  --rs-avatar-shape: 50%;
+  --rs-online-color: #43b581;
+  --rs-idle-color: #fab71a;
+  --rs-dnd-color: #f04747;
+  --rs-offline-color: #636b75;
+  --rs-streaming-color: #643da7;
+  --rs-invisible-color: #747f8d;
+}
