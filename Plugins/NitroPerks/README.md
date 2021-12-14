@@ -7,18 +7,23 @@ Este Plugin permite utilizar funciones que solo se pueden utilizar teniendo una 
 ## Ejemplos (Capturas - GIF)
 
 Captura de opciones al compartir la pantalla
+
 ![Captura de opciones al compartir la pantalla](https://github.com/Papela/BetterDiscordAddons/blob/main/Plugins/NitroPerks/Capturas/Captura-modo-de-transmision.png?raw=true)
 
 GIF usando un emoticono animado sin tener una suscripcion a Discord Nitro.
+
 ![GIF emoticono animado](https://github.com/Papela/BetterDiscordAddons/blob/main/Plugins/NitroPerks/Capturas/GIF-Emoticono-Animado.gif?raw=true)
 
 Captura de configuracion del plugin. (1)
+
 ![Captura de configuracion del plugin 1](https://github.com/Papela/BetterDiscordAddons/blob/main/Plugins/NitroPerks/Capturas/Configuracion1-Predeterminada.jpg?raw=true)
 
 Captura de configuracion del plugin. (2)
+
 ![Captura de configuracion del plugin 2](https://github.com/Papela/BetterDiscordAddons/blob/main/Plugins/NitroPerks/Capturas/Configuracion2-Predeterminada.jpg?raw=true)
 
 Captura de configuracion del plugin. (3)
+
 ![Captura de configuracion del plugin 3](https://github.com/Papela/BetterDiscordAddons/blob/main/Plugins/NitroPerks/Capturas/Configuracion3-Predeterminada.jpg?raw=true)
 
 
