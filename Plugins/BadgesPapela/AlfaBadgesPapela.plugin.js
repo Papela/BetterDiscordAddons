@@ -6,8 +6,8 @@
  * @description Plugin en version Alfa. Agrega Logros (Nitro, Hypesquad, etc...) personalizados en Discord.
  * @donate https://www.paypal.me/Papela
  * @website https://github.com/Papela
- * @source https://github.com/Papela/BetterDiscordAddons/blob/main/Plugins/BadgesPapela/BadgesPapela.plugin.js
- * @updateUrl https://raw.githubusercontent.com/Papela/BetterDiscordAddons/main/Plugins/BadgesPapela/BadgesPapela.plugin.js
+ * @source https://raw.githubusercontent.com/Papela/BetterDiscordAddons/main/Plugins/BadgesPapela/AlfaBadgesPapela.plugin.js
+ * @updateUrl https://raw.githubusercontent.com/Papela/BetterDiscordAddons/main/Plugins/BadgesPapela/AlfaBadgesPapela.plugin.js
  */
 
 module.exports = (_ => {
