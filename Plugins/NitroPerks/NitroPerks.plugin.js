@@ -1,6 +1,10 @@
 /**
  * @name NitroPerks - Beta
- * @website https://github.com/respecting/NitroPerks
+ * @author Papela#8062
+ * @authorId 529736520048050189
+ * @description Plugin en version Beta. Permite usar funciones que solo estan disponibles con Discord Nitro. Plugin no oficial y en version Beta!
+ * @donate https://www.paypal.me/Papela
+ * @website https://github.com/Papela
  * @source https://github.com/Papela/BetterDiscordAddons/edit/main/Plugins/NitroPerks/nitroperks.plugin.js
  * @updateUrl https://raw.githubusercontent.com/respecting/NitroPerks/main/NitroPerks.plugin.js
  */
