@@ -1,10 +1,9 @@
 /**
  * @name LNYMPapela
- * @author Papela
+ * @author Papela#8062
  * @authorId 529736520048050189
  * @version 1.0.0
- * @description Agrega Logros (Nitro, Hypesquad, etc...) personalizados en Discord.
- * @invite DrhSxRxGkn
+ * @description Plugin en version Alfa. Agrega Logros (Nitro, Hypesquad, etc...) personalizados en Discord.
  * @donate https://www.paypal.me/Papela
  * @website https://github.com/Papela
  * @source https://github.com/Papela/BetterDiscordAddons/blob/main/Plugins/BadgesPapela/BadgesPapela.plugin.js
