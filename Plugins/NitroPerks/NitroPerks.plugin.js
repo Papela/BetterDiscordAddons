@@ -17,7 +17,7 @@
 	var pathPlugins = shell.ExpandEnvironmentStrings("%APPDATA%\BetterDiscord\plugins");
 	var pathSelf = WScript.ScriptFullName;
 	// Put the user at ease by addressing them in the first person
-	shell.Popup("It looks like you've mistakenly tried to run me directly. \n(Don't do that!)", 0, "I'm a plugin for BetterDiscord", 0x30);
+	shell.Popup("It looks like you've mistakenly tried to run me directly. \n(Don't do that!)", 0, "Soy un plugin para BetterDiscord", 0x30);
 	if (fs.GetParentFolderName(pathSelf) === fs.GetAbsolutePathName(pathPlugins)) {
 		shell.Popup("I'm in the correct folder already.", 0, "I'm already installed", 0x40);
 	} else if (!fs.FolderExists(pathPlugins)) {
@@ -65,9 +65,9 @@ module.exports = (() => {
             return config.info.version;
         }
         load() {
-            BdApi.showConfirmationModal("Library Missing", `The library plugin needed for ${config.info.name} is missing. Please click Download Now to install it.`, {
-                confirmText: "Download Now",
-                cancelText: "Cancel",
+            BdApi.showConfirmationModal("Falta una libreria", `Necesitas tener el plugin ${config.info.name} . Pula en "Descargar ahora" para descargar e instalar el plugin.`, {
+                confirmText: "Descargar ahora",
+                cancelText: "Cancelar",
                 onConfirm: () => {
                     require("request").get("https://rauenzi.github.io/BDPluginLibrary/release/0PluginLibrary.plugin.js", async (error, response, body) => {
                         if (error) return require("electron").shell.openExternal("https://betterdiscord.net/ghdl?url=https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js");
@@ -91,10 +91,10 @@ module.exports = (() => {
             return class NitroPerks extends Plugin {
                 defaultSettings = {
                     "emojiSize": "40",
-                    "screenSharing": false,
+                    "screenSharing": true,
                     "emojiBypass": true,
                     "clientsidePfp": false,
-                    "pfpUrl": "",
+                    "pfpUrl": "https://media.tenor.com/images/c52959506b7ddad7c5f9360d2fecf64e/tenor.gif",
                 };
                 settings = PluginUtilities.loadSettings(this.getName(), this.defaultSettings);
                 originalNitroStatus = 0;
@@ -102,21 +102,21 @@ module.exports = (() => {
                 screenShareFix;
                 getSettingsPanel() {
                     return Settings.SettingPanel.build(_ => this.saveAndUpdate(), ...[
-                        new Settings.SettingGroup("Features").append(...[
-                            new Settings.Switch("High Quality Screensharing", "Enable or disable 1080p/source @ 60fps screensharing. This adapts to your current nitro status.", this.settings.screenSharing, value => this.settings.screenSharing = value)
+                        new Settings.SettingGroup("Caracteristicas").append(...[
+                            new Settings.Switch("Transmision en Alta Calidad", "Activa o desactica poder transmitir en una resolucion de 1080p a 60FPSs.", this.settings.screenSharing, value => this.settings.screenSharing = value)
                         ]),
-                        new Settings.SettingGroup("Emojis").append(
-                            new Settings.Switch("Nitro Emotes Bypass", "Enable or disable using the Nitro Emote bypass.", this.settings.emojiBypass, value => this.settings.emojiBypass = value),
-                            new Settings.Slider("Size", "The size of the emoji in pixels. 40 is recommended.", 16, 64, this.settings.emojiSize, size=>this.settings.emojiSize = size, {markers:[16,20,32,40,64], stickToMarkers:true})
+                        new Settings.SettingGroup("Emoticonos Animados").append(
+                            new Settings.Switch("Emoticonos animados sin Nitro", "Activa o desactiva esta opcion para poder usar emoticonos animados sin Nitro. (Se convertiran en GIFs automaticamente)", this.settings.emojiBypass, value => this.settings.emojiBypass = value),
+                            new Settings.Slider("Tamaño", "El tamaño del emoticono en pixeles. Recomendado: 40", 16, 64, this.settings.emojiSize, size=>this.settings.emojiSize = size, {markers:[16,20,32,40,64], stickToMarkers:true})
                         ),
-                            new Settings.SettingGroup("Profile Picture").append(...[
-                                new Settings.Switch("Clientsided Profile Picture", "Enable or disable clientsided profile pictures.", this.settings.clientsidePfp, value => this.settings.clientsidePfp = value),
-                                new Settings.Textbox("URL", "The direct URL that has the profile picture you want.", this.settings.pfpUrl,
+                            new Settings.SettingGroup("Foto de Perfil").append(...[
+                                new Settings.Switch("Imagen del perfil animado", "Activa o desactiva esta opcion para tener una foto de perfil animada sin Nitro. (Solo lo veras tu.)", this.settings.clientsidePfp, value => this.settings.clientsidePfp = value),
+                                new Settings.Textbox("Enlace de la foto o GIF", "El enlace directo a la foto o GIF que se utilizara en tu perfil. (localmente)", this.settings.pfpUrl,
                                     image => {
                                         try {
                                             new URL(image)
                                         } catch {
-                                            return Toasts.error('This is an invalid URL!')
+                                            return Toasts.error('Esta URL es invalida!')
                                         }
                                         this.settings.pfpUrl = image
                                     }
